@@ -3,12 +3,14 @@ using namespace std;
 
 class Maths;
 
-class Physics {
+class Physics
+{
 private:
     int p;
 
 public:
-    Physics(int x) {
+    Physics(int x)
+    {
         p = x;
     }
 
@@ -16,12 +18,14 @@ public:
     friend bool isDistinction(Physics, Maths);
 };
 
-class Maths {
+class Maths
+{
 private:
     int m;
 
 public:
-    Maths(int x) {
+    Maths(int x)
+    {
         m = x;
     }
 
@@ -29,15 +33,18 @@ public:
     friend bool isDistinction(Physics, Maths);
 };
 
-int totalMarks(Physics a, Maths b) {
+int totalMarks(Physics a, Maths b)
+{
     return a.p + b.m;
 }
 
-bool isDistinction(Physics a, Maths b) {
+bool isDistinction(Physics a, Maths b)
+{
     return totalMarks(a, b) >= 160;
 }
 
-int main() {
+int main()
+{
     int p, m;
 
     cout << "Enter Physics Mark: ";

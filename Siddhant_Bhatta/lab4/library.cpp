@@ -1,46 +1,55 @@
 #include <iostream>
 using namespace std;
 
-class LibraryBook {
+class LibraryBook
+{
 private:
     string t, a;
     bool av;
 
 public:
-    LibraryBook(string t1, string a1) {
+    LibraryBook(string t1, string a1)
+    {
         t = t1;
         a = a1;
         av = true;
     }
 
-    string getTitle() const {
+    string getTitle() const
+    {
         return t;
     }
 
-    string getAuthor() const {
+    string getAuthor() const
+    {
         return a;
     }
 
-    void display() const {
+    void display() const
+    {
         cout << "Title: " << t << endl;
         cout << "Author: " << a << endl;
         cout << "Available: " << (av ? "Yes" : "No") << endl;
     }
 
-    void checkout() {
+    void checkout()
+    {
         av = false;
     }
 
-    void returnBook() {
+    void returnBook()
+    {
         av = true;
     }
 };
 
-void printBookInfo(const LibraryBook& b) {
+void printBookInfo(const LibraryBook &b)
+{
     b.display();
 }
 
-int main() {
+int main()
+{
     LibraryBook b("CPP", "Bjarne");
 
     b.display();
